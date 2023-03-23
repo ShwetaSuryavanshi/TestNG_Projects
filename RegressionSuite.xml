@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Regression Suite">
+<listeners>
+<listener class-name="common.Listeners"/>
+</listeners>
+  <test name="Test">
+    <classes>
+      <class name="package1.Group_TestCase_In_TestNG"/>
+      <class name="package1.BeforeMethod_AfterMethod_Annotations"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
+
+
+<!-- Select the classes  which we want to create suite of those-> select TestNG-> select Convert to TestNG 
+             This will create the test suite which includes all the classes present in that package-->
+
+

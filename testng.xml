@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Test_Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="package1.Group_TestCase_In_TestNG"/>
+      <class name="package1.BeforeMethod_AfterMethod_Annotations"/>
+      <class name="package1.Hard_Assertion_In_Selenium"/>
+      <class name="package1.Soft_Assertion_in_selenium"/>
+      <class name="package1.LoginTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
+
+
+<!-- Right click on package-> select TestNG-> select Convert to TestNG 
+             This will create the test suite which includes all the classes present in that package-->
+
