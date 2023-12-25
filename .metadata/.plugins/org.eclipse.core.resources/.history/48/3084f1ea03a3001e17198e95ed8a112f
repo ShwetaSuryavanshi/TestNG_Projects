@@ -1,0 +1,13 @@
+package test;
+
+import org.openqa.selenium.By;
+import org.testng.annotations.Test;
+
+public class Radiobuttonselection extends LoginPage {
+	
+	@Test(priority=1)
+	public void test5() {
+		driver.findElement(By.xpath("//input[@value='en_IN']//following-sibling::i")).click();
+	}
+
+}
