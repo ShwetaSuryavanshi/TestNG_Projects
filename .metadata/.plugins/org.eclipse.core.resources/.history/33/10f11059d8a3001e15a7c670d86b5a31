@@ -1,0 +1,35 @@
+package testng3_switchtab;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
+
+public class SwitchTabs2{
+	WebDriver driver;
+	
+	@Test(priority=1)
+	public void setup() {
+		 
+		System.setProperty("webdriver.http.factory", "jdk-http-client");
+		driver=new FirefoxDriver();
+		driver.get("https://www.hyrtutorials.com/p/window-handles-practice.html");
+		driver.manage().window().maximize();
+		driver.manage().deleteAllCookies();
+		
+		}
+	
+	@Test(priority=2)
+	public void openwindow1() {
+	WebDriverWait Explicit = new WebDriverWait(driver, Duration.ofSeconds(30));
+	Explicit.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//img[@id='Header1_headerimg']")));
+		JavascriptExecutor jse= (JavascriptExecutor) driver;
+		jse.executeScript("window.scrollBy(0,1000)");
+	}
+
+}

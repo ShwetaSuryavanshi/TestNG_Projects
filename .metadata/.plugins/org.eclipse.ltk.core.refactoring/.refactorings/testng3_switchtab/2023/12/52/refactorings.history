@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;testng3_switchtab.MultipleTabs&apos; to &apos;SwitchTabs_MultipleTabs&apos;&#x0D;&#x0A;- Original project: &apos;testng3_switchtab&apos;&#x0D;&#x0A;- Original element: &apos;testng3_switchtab.MultipleTabs&apos;&#x0D;&#x0A;- Renamed element: &apos;testng3_switchtab.SwitchTabs_MultipleTabs&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;MultipleTabs&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;testng3_switchtab{MultipleTabs.java[MultipleTabs" matchStrategy="1" name="SwitchTabs_MultipleTabs" qualified="false" references="true" similarDeclarations="false" stamp="1703602488939" textual="false" version="1.0"/>
+</session>

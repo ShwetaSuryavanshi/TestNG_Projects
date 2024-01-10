@@ -1,0 +1,20 @@
+package testng3_switchtab;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Test;
+
+public class SwitchTabs_MultipleTabs {
+
+WebDriver driver;
+	
+	@Test(priority=1)
+	public void Browsersetup() {
+		SwitchTabs2 tabs= new SwitchTabs2();
+		
+		tabs.setup();
+		
+		
+		}
+	
+}

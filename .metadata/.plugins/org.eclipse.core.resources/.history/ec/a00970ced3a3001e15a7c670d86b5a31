@@ -1,0 +1,17 @@
+package testng3_switchtab;
+
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class SwitchTabs2 extends Switchtabs{
+	
+	@Override
+	public void setup() {
+		 
+		
+		driver.get("https://www.hyrtutorials.com/p/window-handles-practice.html");
+		driver.manage().window().maximize();
+		driver.manage().deleteAllCookies();
+		
+		}
+
+}

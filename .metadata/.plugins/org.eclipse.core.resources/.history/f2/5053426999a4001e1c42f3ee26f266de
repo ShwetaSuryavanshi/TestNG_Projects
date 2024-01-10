@@ -1,0 +1,32 @@
+package testng4_alerts_popus;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import com.github.dockerjava.api.model.Driver;
+
+public class _1HandleAlerts {
+	WebDriver driver;
+	
+	public void setup() {
+		
+		System.setProperty("webdriver.http.factory", "jdk-http-client");
+		driver= new FirefoxDriver();
+		
+		driver.get("https://demo.guru99.com/test/delete_customer.php");
+		driver.manage().window().maximize();
+		
+	}
+	
+	public void test1() throws InterruptedException {
+		
+		driver.findElement(By.xpath("//input[@type='text' and @name='cusid']")).sendKeys("dvfrhjf");
+		driver.findElement(By.xpath("//input[@type='submit']")).click();
+		Thread.sleep(2000);
+		driver.switchTo().alert().accept();
+		Thread.sleep(2000);
+		driver.switchTo().alert().accept();
+	}
+
+}

@@ -1,0 +1,17 @@
+
+package testng3_switchtab;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Switchtabs {
+	WebDriver driver;
+	
+	public void setup() {
+ 
+	System.setProperty("webdriver.http.factory","jdk-http-client");
+	driver= new FirefoxDriver();
+	
+	
+	}
+}

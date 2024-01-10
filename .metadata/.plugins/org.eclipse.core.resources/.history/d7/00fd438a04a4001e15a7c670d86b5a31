@@ -1,0 +1,59 @@
+package testng3_switchtab;
+
+import java.util.Iterator;
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.Test;
+
+public class SwitchTabs_MultipleTabs {
+
+
+	
+	@Test(priority=1)
+	public void BrowsersetupAndScrollDown_multipletabs() {
+SwitchTabs2 tabs= new SwitchTabs2();
+		
+		tabs.setup();
+		tabs.scrolldown();
+		}
+	
+	
+	@Test(priority=2)
+	public void multipletabs() {
+		driver.findElement(By.xpath("//button[@id='newWindowsBtn']")).click();
+		
+		Set<String> handle= driver.getWindowHandles();
+		Iterator<String> it= handle.iterator();
+		System.out.println("No of windows: "+ handle.size());
+		
+		String parentwindow= it.next();
+		String parent_title=driver.getTitle();
+		System.out.println("parent_title"+ parent_title);
+		System.out.println("Parent window is: "+ parentwindow);
+		
+		String child_window1= it.next();
+		driver.switchTo().window(child_window1);
+		String child_title1=driver.getTitle();
+		System.out.println("child_title1: "+ child_title1);
+		System.out.println("child window 1 is: "+ child_window1);
+		
+		
+		
+		String child_window2=it.next();
+		driver.switchTo().window(child_window2);
+		String child_title2=driver.getTitle();
+		System.out.println("child_title2: "+ child_title2);
+		System.out.println("child window 2 is: "+ child_window2);
+		
+		
+		
+		
+		
+		
+		
+	}
+	
+}
